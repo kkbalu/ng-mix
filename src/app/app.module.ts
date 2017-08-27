@@ -5,13 +5,11 @@ import { AppComponent } from './app.component';
 import { Ng1ComponentFacade } from './ng1-component-facade.directive';
 import {HttpClientModule} from "@angular/common/http";
 import {UpgradeModule} from "@angular/upgrade/static";
-import { GridComponent } from './grid/grid.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    Ng1ComponentFacade,
-    GridComponent,
+    Ng1ComponentFacade
   ],
   imports: [
     BrowserModule,
