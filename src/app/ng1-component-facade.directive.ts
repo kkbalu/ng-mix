@@ -1,4 +1,4 @@
-mport {
+import {
   Directive, ElementRef, Injector, Input, OnInit, SimpleChanges, OnChanges, DoCheck,
     OnDestroy, Output, EventEmitter
 } from '@angular/core';

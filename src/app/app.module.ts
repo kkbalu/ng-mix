@@ -1,18 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { Ng1ComponentFacadeDirective } from './ng1-component-facade.directive';
+import { Ng1ComponentFacade } from './ng1-component-facade.directive';
+import {HttpClientModule} from "@angular/common/http";
+import {UpgradeModule} from "@angular/upgrade/static";
+import { GridComponent } from './grid/grid.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    Ng1ComponentFacadeDirective
+    Ng1ComponentFacade,
+    GridComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    UpgradeModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ]
 })
-export class AppModule { }
+export class AppModule {
+  ngDoBootstrap(): void {}
+}
